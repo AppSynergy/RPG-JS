@@ -1,0 +1,3 @@
+[submodule "canvasengine"]
+	path = canvasengine
+	url = https://github.com/AppSynergy/CanvasEngine.git
