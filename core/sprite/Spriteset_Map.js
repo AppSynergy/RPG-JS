@@ -40,8 +40,8 @@ Class.create("Spriteset_Map", {
 */
 	scene: null,
 	data: null,
-	tile_w: 32,
-	tile_h: 32,
+	tile_w: RPGJS.resolution.x,
+	tile_h: RPGJS.resolution.y,
 	width: 0,
 	height: 0,
 	nb_layer: 3,

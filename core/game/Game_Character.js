@@ -65,7 +65,7 @@ Class.create("Game_Character", {
 		this.id = 0;
 		this.position(0, 0);
 		
-		this.rect(4, 16, 32-8, 16);
+		this.rect(4, RPGJS.resolution.y/2, RPGJS.resolution.x-8, RPGJS.resolution.y/2);
 		
 		if (this._initialize) this._initialize.apply(this, arguments);
 		

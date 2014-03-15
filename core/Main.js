@@ -42,6 +42,8 @@ THE SOFTWARE.
 
 */
 Class.create("RPGJS", {
+	
+	resolution: {x: 20, y: 20},
 
 	_defaultData: function(data) {
 		data = data || {};
