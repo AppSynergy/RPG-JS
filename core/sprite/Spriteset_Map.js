@@ -42,6 +42,7 @@ Class.create("Spriteset_Map", {
 	data: null,
 	tile_w: RPGJS.resolution.x,
 	tile_h: RPGJS.resolution.y,
+	spriteSheetWidth: RPGJS.spriteSheetWidth,
 	width: 0,
 	height: 0,
 	nb_layer: 3,
@@ -324,8 +325,8 @@ Class.create("Spriteset_Map", {
 								if (self.nb_autotiles_max * 48 <= id) {
 									
 									id -= (self.nb_autotiles_max * 48);
-									var pos_y = parseInt(id / (256 / self.tile_h)) * self.tile_h;
-									var pos_x = (id % (256 / self.tile_w)) * self.tile_w;
+									var pos_y = parseInt(id / (self.spriteSheetWidth / self.tile_h)) * self.tile_h;
+									var pos_x = (id % (self.spriteSheetWidth / self.tile_w)) * self.tile_w;
 									if (self.data.graphics && self.data.graphics.tileset) {
 										tile_w = self.tile_w;
 										if (pos_x + self.tile_w > img.width) {
@@ -336,6 +337,7 @@ Class.create("Spriteset_Map", {
 											tile_h -= (pos_y + self.tile_h) - img.height;
 										}
 										tile.drawImage("tileset", pos_x, pos_y, tile_w, tile_h, 0, 0, tile_w, tile_h);
+										console.log(tile);
 									}
 									prop = map_prop[id];
 								}

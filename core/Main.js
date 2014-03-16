@@ -44,6 +44,7 @@ THE SOFTWARE.
 Class.create("RPGJS", {
 	
 	resolution: {x: 20, y: 20},
+	spriteSheetWidth: 100,
 
 	_defaultData: function(data) {
 		data = data || {};
