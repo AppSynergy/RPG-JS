@@ -337,7 +337,6 @@ Class.create("Spriteset_Map", {
 											tile_h -= (pos_y + self.tile_h) - img.height;
 										}
 										tile.drawImage("tileset", pos_x, pos_y, tile_w, tile_h, 0, 0, tile_w, tile_h);
-										console.log(tile);
 									}
 									prop = map_prop[id];
 								}
